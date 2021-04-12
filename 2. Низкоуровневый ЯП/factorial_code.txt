@@ -1,0 +1,14 @@
+input 100
+init 101 1
+init_accum 1
+
+loop:
+	inc 101
+	mult 101
+	ainit 102
+	cmpsmaller 101 100
+	iftrue jmpb loop:
+	else continue
+	endiftrue
+output 102
+end

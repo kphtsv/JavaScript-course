@@ -1,0 +1,30 @@
+input 103
+input 104
+init_accum 0
+
+cmpeq 103 104
+iftrue
+	jmpf exit:
+else continue
+endiftrue
+
+loop:
+	cmplarger 103 104
+	iftrue
+		add 103
+		subtr 104
+		ainit 103
+		reset_acc
+	else
+		add 104
+		subtr 103
+		ainit 104
+		reset_acc
+	endiftrue
+	cmpneq 103 104
+	iftrue jmpb loop:
+	else contunue
+	endiftrue
+exit:
+output 103
+end
