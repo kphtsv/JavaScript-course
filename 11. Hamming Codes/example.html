@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Hamming code</title>
+    </head>
+
+    <body>
+        <h1><b>Hamming code</b></h1> <br/>
+        <br/>
+        <form onsubmit="return Encode()">
+            Enter a code of any length: 
+            <input id="encode_field" type="text"> <input id="encode_inp" type="submit" value="Encode"> <br/>
+        </form>
+        <form onsubmit="return Decode()">
+            String encoded. Mess it up! 
+            <input id="decode_field" type="text"> <input id="decode_inp" type="submit" value="Decode"> <br/>
+        </form>
+        <form onsubmit="return Reset()">
+            Result will show up here. <input id="result">
+            <input id="reset_inp" type="submit" value="Reset">
+            <br/> <br/>
+        </form>
+    </body>
+
+    <script type="text/javascript">
+        // весь скрипт с функциями и переменными
+
+        // для примера
+        function Reset() {
+            document.getElementById('encode_field').value = "";
+            document.getElementById('decode_field').value = "";
+            document.getElementById('result').value = "";
+            return false;
+        }
+    </script>
+</html>
